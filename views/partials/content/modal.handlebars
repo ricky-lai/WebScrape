@@ -1,0 +1,46 @@
+<div class="modal fade" id="{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="notesModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Notes for {{this.title}}</h4>
+            </div>
+            <div class="modal-body">
+                {{#if this.notes}}
+                {{#each this.notes}}
+                <div class="well">
+                    <div class="row">
+                        <div class="col col-md-10">
+                            <p>{{this.text}}</p>
+                        </div>
+                        <div class="col col-md-2">
+                            <form class="form-inline" action="/api/notes/{{this.id}}?_method=DELETE" method="POST">
+                                <button type="submit" class="btn btn-danger">X</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                {{else}}
+                <div class="well">
+                    <p>This story does not have any notes.</p>
+                </div>
+                {{/if}}
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col col-md-8">
+                        <form class="form-inline" action="/api/notes/{{this.id}}" method="POST">
+                            <input type="text" class="form-control" id="text" name="text"
+                                placeholder="Add a new note...">
+                            <button type="submit" class="btn btn-info">Add Note</button>
+                        </form>
+                    </div>
+                    <div class="col col-md-4">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
