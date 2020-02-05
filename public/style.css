@@ -1,0 +1,71 @@
+html, body {
+    min-height: 100%;
+
+     
+}
+
+body {
+    padding: 70px;
+    /* background-color: #f6f6ef; */
+    background-color: #8a9ba9;
+
+}
+
+#navbar{
+    border-color: #000;
+    background-color: #f6f6ef;
+    border-style:solid;
+    border-bottom: 2px solid black;
+    color:black;
+
+}
+
+
+.btn, a.btn , #btn ,#apiBtn{
+    background-color:#8a9ba9;
+    border-color: #000;
+    color:white;
+}
+
+.jumbotron {
+    margin:20px;
+    border-color: #000;
+    background-color: #f6f6ef;
+    border-style:solid;
+    border-width: 2px;
+}
+
+#scrapeBtn {
+    text-align: right;
+    float:right;
+}
+
+.well {
+    /* background-color: #fc6621; */
+    background-color:#f6f6ef;
+    border-color: #000;
+}
+.container{
+    background-color:#8a9ba9;
+}
+
+#socialLinks{
+    float:right;
+}
+
+#text{
+    background-color:#f6f6ef;
+}
+
+img{
+    width:50px;
+    height:50px;
+    float:left;
+}
+
+.navbar-brand{
+    font-weight: bold;
+    
+}
+
+a:hover,a:visited,a:link ,#scrapeBtn ,a { color:#000; }

@@ -1,0 +1,42 @@
+{{> navs/saved}}
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{this.title}}</h1>
+            <h3>{{this.subtitle}}</h3>
+        </div>
+    </div>
+</div>
+
+<div id="articles">
+    {{#if articles}}
+        {{#each articles}}
+            <div class="well">
+                <div class="row">
+                    <div class="col col-md-8">
+                        <h4><a href="{{this.link}}">{{this.title}}</a></h4>
+                    </div>
+                    <div class="col col-md-2">
+                        <a id="btn"class="btn btn-success" href="#" data-toggle="modal" data-target="#{{this.id}}">Notes</a>
+                    </div>
+                    <div class="col col-md-2">
+                        <form class="form-inline" action="/api/articles/{{this.id}}?_method=DELETE" method="POST">
+                            <button type="submit" class="btn btn-danger">Delete Article</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            
+{{> content/modal}}
+</div>
+            
+            
+        {{/each}}
+       
+    {{else}}
+        <div class="well">
+            <h4>There are no saved articles.</h4>
+        </div>
+    {{/if}}
+</div>
