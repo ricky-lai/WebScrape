@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/ricky-lai/WebScrape#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.3",
+    "express": "^4.18.2",
     "express-handlebars": "^3.0.0",
     "method-override": "^3.0.0",
     "mongoose": "^5.9.1",
